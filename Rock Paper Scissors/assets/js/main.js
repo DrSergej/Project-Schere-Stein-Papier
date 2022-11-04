@@ -132,6 +132,7 @@ function compareChoises(choisPlayer) {
 
 			// Spieler hat Papier(2) UND Computer hat Stein(1)
 			if (choisPlayer == 2 && compChoise == 1) {
+				announcer.innerHTML = "Player winns this round";
 				playerScore++;
 				playerCounter.innerHTML = playerScore;
 				activeRoundScore++;
@@ -140,6 +141,7 @@ function compareChoises(choisPlayer) {
 
 			// Spieler hat Papier(2) UND Computer hat Schere(3)
 			if (choisPlayer == 2 && compChoise == 3) {
+				announcer.innerHTML = "Computer winns this Round";
 				computerScore++;
 				computerCounter.innerHTML = computerScore;
 				activeRoundScore++;
@@ -148,6 +150,7 @@ function compareChoises(choisPlayer) {
 
 			// Spieler hat Schere(3) UND Computer hat Stein(1)
 			if (choisPlayer == 3 && compChoise == 1) {
+				announcer.innerHTML = "Computer winns this Round";
 				computerScore++;
 				computerCounter.innerHTML = computerScore;
 				activeRoundScore++;
@@ -156,6 +159,7 @@ function compareChoises(choisPlayer) {
 
 			// Spieler hat Schere(3) UND Computer hat Papier(2)
 			if (choisPlayer == 3 && compChoise == 2) {
+				announcer.innerHTML = "Player winns this round";
 				playerScore++;
 				playerCounter.innerHTML = playerScore;
 				activeRoundScore++;
