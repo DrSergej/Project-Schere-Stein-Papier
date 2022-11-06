@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
@@ -15,7 +16,7 @@
 		<header><h1>Rock Paper Scissors</h1></header>
 		<main>
 			<section class="rounds">
-				<h3>How many rounds?</h3>
+				<h3 class="how-many-rounds">How many rounds?</h3>
 				<div onchange="checkRounds(event)" class="radio-btns r1">
 					<input class="input5" type="radio" name="rounds" />
 					<label for="rounds">5</label>
@@ -32,34 +33,34 @@
 					<input class="input20" type="radio" name="rounds" />
 					<label for="rounds">20</label>
 				</div>
-			</section> 
+			</section>
 			<h3 class="rounds-counter-headline hide-content">Rounds left:</h3>
 			<section class="rounds-counter hide-content">
 				<h2 class="active-round-h2">0</h2>
-				<span>/</span>
+				<span class="span-slash">/</span>
 				<h2 class="rounds-total-h2">0</h2>
 			</section>
 			<section class="points-counter">
-				<span>Player</span>
+				<span class="player-span">Player </span>
 				<h2 class="player-counter">0</h2>
-				<span>:</span>
+				<span class="span-doppelpunkt">:</span>
 
 				<h2 class="computer-counter">0</h2>
-				<span>Computer</span>
+				<span class="computer-span">Computer</span>
 			</section>
 			<h2 class="announcer">Let's play</h2>
 			<section class="buttons">
 				<div onclick="playerChooseRock(event)" class="rock">
-					<img src="./assets/img/rock-transparent-png-17.png" alt="Rock" />
-				</div>
-				<div onclick="playerChoosePaper(event)" class="paper">
 					<img
-						src="./assets/img/paper-clipart-transparent-10.png"
-						alt="Paper"
+						src="./assets/img/icons8-hand-rock-skin-type-1-100.png"
+						alt="Rock"
 					/>
 				</div>
+				<div onclick="playerChoosePaper(event)" class="paper">
+					<img src="./assets/img/icons8-roll-of-paper-96.png" alt="Paper" />
+				</div>
 				<div onclick="playerChooseScissors(event)" class="scissors">
-					<img src="./assets/img/scissors-clip-art-2.png" alt="Scissors" />
+					<img src="./assets/img/icons8-scissor-64.png" alt="Scissors" />
 				</div>
 			</section>
 			<h4>MAKE YOUR MOVE.</h4>

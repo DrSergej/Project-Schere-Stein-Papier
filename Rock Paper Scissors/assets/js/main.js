@@ -128,6 +128,7 @@ function compareChoises(choisPlayer) {
 				playerCounter.innerHTML = playerScore;
 				activeRoundScore++;
 				activeRound.innerHTML = activeRoundScore;
+				// document.querySelector(".rock").style.animation = `win-animation 1s`;
 			}
 
 			// Spieler hat Papier(2) UND Computer hat Stein(1)
@@ -180,5 +181,9 @@ function compareChoises(choisPlayer) {
 				announcer.style.color = "yellow";
 			}
 		}
+	} else {
+		document.querySelector(".how-many-rounds").innerHTML =
+			"Wähle Rundenanzahl zuerst!";
+		document.querySelector(".how-many-rounds").style.color = `red`;
 	}
 }
