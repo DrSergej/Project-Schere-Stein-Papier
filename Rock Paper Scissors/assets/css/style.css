@@ -153,6 +153,14 @@ section {
 		background-color: rgba(255, 0, 0, 0);
 	}
 }
+@keyframes draw-animation {
+	from {
+		background-color: rgb(159, 159, 159);
+	}
+	to {
+		background-color: rgba(255, 0, 0, 0);
+	}
+}
 
 .player-span,
 .computer-span {

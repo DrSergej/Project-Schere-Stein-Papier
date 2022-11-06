@@ -16,11 +16,17 @@ const announcer = document.querySelector(".announcer");
 const playerCounter = document.querySelector(".player-counter");
 const computerCounter = document.querySelector(".computer-counter");
 
+const rockBtn = document.querySelector(".rock");
+const paperBtn = document.querySelector(".paper");
+const scissorsBtn = document.querySelector(".scissors");
+
 // globale Variablen Zähler Player/Computer - Rundenzähler
 let playerScore = 0;
 let computerScore = 0;
 let activeRoundScore = 0;
 let totalRoundScore = 5;
+let trackScorePlayer = 0;
+let trackScoreComputer = 0;
 
 // überprüfe welcher Radio Button ist aktiv
 function checkRounds(event) {
@@ -110,6 +116,7 @@ function compareChoises(choisPlayer) {
 				announcer.innerHTML = "DRAW"; // falls ja = Unentschieden
 				activeRoundScore++; // Rundenzähler um 1 erhöhen
 				activeRound.innerHTML = activeRoundScore; // ins HTML schreiben
+				document.querySelector(".rock").style.animation = `draw-animation 1s`;
 			}
 
 			// Spieler hat Stein(1) UND Computer hat Papier(2)
@@ -187,3 +194,13 @@ function compareChoises(choisPlayer) {
 		document.querySelector(".how-many-rounds").style.color = `red`;
 	}
 }
+
+rockBtn.addEventListener(`click`, () => {
+	if (playerScore > trackScorePlayer) {
+		document.querySelector(".rock").style.animation = `win-animation 1s`;
+		trackScorePlayer = playerScore;
+	} else if (computerScore > trackScoreComputer) {
+		document.querySelector(".rock").style.animation = `loose-animation 1s`;
+		trackScoreComputer = computerScore;
+	}
+});
